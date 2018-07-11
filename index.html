@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+	<title>2048</title>
+	<link rel="shortcut icon" type="source/image/x-icon" href="" />
+	<link id="currentStyle" rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+<body>
+	<div class="game-body">
+		<header>
+			<h2>2048</h2>
+			<div class="score">Score (Highest)<br /><span id="score_current">0</span> (<span id="score_highest">0</span>)</div>
+		</header>
+		<div class="game-control">
+			
+			<ul class="control-menu close">
+				<li id="control_openMenu">Menu</li>
+				<li id="control_newGame">Get a new puzzle</li>
+				<li id="control_screen">Open on-screen control</li>
+				<li id="control_clear">Clear Highest score</li>
+			</ul>
+		</div>
+		<div class="game-area">
+			<div id="game_back">
+				<div class="p0"></div>
+				<div class="p1"></div>
+				<div class="p2"></div>
+				<div class="p3"></div>
+				<div class="p4"></div>
+				<div class="p5"></div>
+				<div class="p6"></div>
+				<div class="p7"></div>
+				<div class="p8"></div>
+				<div class="p9"></div>
+				<div class="p10"></div>
+				<div class="p11"></div>
+				<div class="p12"></div>
+				<div class="p13"></div>
+				<div class="p14"></div>
+				<div class="p15"></div>
+			</div>
+			<div id="game_front">
+				<div class="p4"><div class="tile-2">2</div></div>
+				<div class="p5"><div class="tile-4">0</div></div>
+				<div class="p6"><div class="tile-8">4</div></div>
+				<div class="p7"><div class="tile-16">8</div></div>
+				<div class="p9"><div class="tile-16384">By</div></div>
+				<div class="p10"><div class="tile-16384">Peter</div></div>
+			</div>
+			<div class="alert alert-over">
+				Game Over<br />
+				<button id="alert_newGame">Try again</button>
+			</div>
+			<div class="alert alert-success">
+				Congratulation!<br />
+				You win!<br />
+				<button id="alert_continue">Keep going</button>
+			</div>
+		</div>
+
+		<div class="arrow">
+			<button id="up">↑</button>
+			<button id="down">↓</button>
+			<button id="left">←</button>
+			<button id="right">→</button>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script>
+		if(window.jQuery){console.log("%c%s","color: black;","2048 running...")}
+		else{document.write('<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"><\/script>')}
+		if (!window.jQuery)console.log("Warning: jQuery does not work!!!")
+	</script>
+	<script src="https://hammerjs.github.io/dist/hammer.js"></script>
+	<script src="jquery/jquery-ui-1.12.1.min.js"></script>
+	<script src="grid.js"></script>
+	<script src="controller.js"></script>
+	<script src="app.js"></script>
+
+</body>
+</html>
